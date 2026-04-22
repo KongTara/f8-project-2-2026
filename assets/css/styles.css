@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #ffb900;
+    --secondary-color: #fffcf4;
+    --third-color: #2e2100;
+}
+
 html,
 body {
     scroll-behavior: smooth;
@@ -16,4 +22,91 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
+}
+
+/* ============ Common =========== */
+
+.main-container {
+    width: 1170px;
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 118px;
+    padding: 0 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #171100;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #fff;
+}
+
+/* ============ Header & Navigation =========== */
+.header {
+    background-color: var(--secondary-color);
+}
+
+.fixed-header {
+    position: sticky;
+    top: -28px;
+    left: 0;
+    z-index: 1;
+}
+
+.header .body {
+    display: flex;
+    padding: 36px 0 8px;
+    align-items: center;
+}
+
+.navbar {
+    margin-left: auto;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    position: relative;
+    padding: 8px 21px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #5f5b53;
+}
+
+.navbar a:hover,
+.navbar li.active a {
+    text-shadow: 1px 0 0 currentColor;
+    color: #171100;
+}
+
+.navbar li.active a::after {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 21px;
+    bottom: 6px;
+    width: 12px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #171100;
+}
+
+.header .action {
+    margin-left: 50px;
+}
+
+.header .action .sign-up-btn {
+    min-width: 144px;
 }
